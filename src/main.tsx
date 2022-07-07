@@ -9,6 +9,8 @@ import Demo2 from "@/pages/demo2";
 import { getParameterByName } from "./libs/utils";
 import eruda from "eruda";
 import "./libs/rem";
+import { Provider } from "react-redux";
+import configStore from "./store/configureStore";
 
 // 初始化函数
 (() => {
@@ -21,14 +23,18 @@ import "./libs/rem";
   }
 })();
 
+const store = configStore();
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Demo1" element={<Demo1 />} />
-        <Route path="/Demo2" element={<Demo2 />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Demo1" element={<Demo1 />} />
+          <Route path="/Demo2" element={<Demo2 />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </>
 );
