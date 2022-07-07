@@ -1,9 +1,28 @@
-import React from "react";
-
+import { Button } from "react-vant";
+import { useNavigate } from "react-router-dom";
 const Index = () => {
+  let navigate = useNavigate();
+  let list: any = [
+    {
+      title: "Demo1",
+      fn: () => {
+        navigate("/Demo1");
+      },
+    },
+    {
+      title: "Demo2",
+      fn: () => {
+        navigate("/Demo2");
+      },
+    },
+  ];
   return (
     <>
-      <div>Welcome Home</div>
+      {list.map((x, i) => (
+        <Button key={i} block onClick={x.fn}>
+          {x.title}
+        </Button>
+      ))}
     </>
   );
 };

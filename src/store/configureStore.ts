@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import { createPromise } from "redux-promise-middleware";
 import thunkMiddleware from "redux-thunk";
+import logger from "redux-logger";
 import rootReducer from "./reducers/index.reducer";
 
 const promiseMiddleWare = createPromise({
@@ -16,7 +17,7 @@ const composeEnhancers =
 const middlewares = [thunkMiddleware, promiseMiddleWare];
 
 if (process.env.NODE_ENV === "development") {
-  // middlewares.push(require("redux-logger").createLogger());
+  middlewares.push(logger);
 }
 
 const enhancer = composeEnhancers(applyMiddleware(...middlewares));

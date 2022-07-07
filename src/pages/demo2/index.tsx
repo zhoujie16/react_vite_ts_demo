@@ -1,9 +1,7 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import * as actions from "../../store/actions/demo.action";
-
+import { Button } from "react-vant";
 import "./index.scss";
-
 
 export default function Home() {
   const state: any = useSelector(state => state);
@@ -31,7 +29,7 @@ export default function Home() {
   return (
     <div>
       <div style={{ padding: "12px" }}>
-        {/* <Button
+        <Button
           block
           onClick={() => {
             history.back();
@@ -50,7 +48,7 @@ export default function Home() {
         </Button>
         <Button block onClick={reqTestFn}>
           reqTest
-        </Button> */}
+        </Button>
         <div>{num}</div>
         <pre>{testData}</pre>
       </div>

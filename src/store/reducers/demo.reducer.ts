@@ -21,7 +21,7 @@ export default function counter(state = INITIAL_STATE, action) {
         num: state.num + action.payload,
       };
     case `API_getUserInfo_SUCCESS`:
-      let testData = action.payload.data;
+      let testData = action.payload;
       return {
         ...state,
         testData,
