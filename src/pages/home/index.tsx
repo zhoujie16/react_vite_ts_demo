@@ -15,6 +15,12 @@ const Index = () => {
         navigate("/Demo2");
       },
     },
+    {
+      title: "Demo3",
+      fn: () => {
+        navigate("/Demo3");
+      },
+    },
   ];
   return (
     <>

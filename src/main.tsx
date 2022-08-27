@@ -11,6 +11,7 @@ import eruda from "eruda";
 import "./libs/rem";
 import { Provider } from "react-redux";
 import configStore from "./store/configureStore";
+import Demo3 from "./pages/demo3";
 
 // 初始化函数
 (() => {
@@ -33,6 +34,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<Home />} />
           <Route path="/Demo1" element={<Demo1 />} />
           <Route path="/Demo2" element={<Demo2 />} />
+          <Route path="/Demo3" element={<Demo3 />} />
         </Routes>
       </BrowserRouter>
     </Provider>
