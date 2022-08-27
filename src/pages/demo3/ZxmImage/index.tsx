@@ -7,7 +7,7 @@ export default function Index(props: any) {
   let pre_ref: any = useRef();
   let next_ref: any = useRef();
   let initImage = async () => {
-    console.log(pre_ref, next_ref);
+    // console.log(pre_ref, next_ref);
     await new Promise(r => setTimeout(r, 0));
     await new Promise(r => setTimeout(r, 500));
     const pre: any = pre_ref.current;
@@ -30,7 +30,7 @@ export default function Index(props: any) {
         if (isIntersecting) {
           // isIntersecting 如果这个值 为 true 那就是 DOM 进去 可视区
           // 停止 观察
-          console.log("P 进入 可视区");
+          // console.log("P 进入 可视区");
           initImage();
           observer.unobserve(p);
         }

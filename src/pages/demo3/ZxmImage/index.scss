@@ -7,17 +7,18 @@
       position: absolute;
       width: 100%;
       height: 100%;
+      object-fit: contain;
     }
     .hidden {
       opacity: 0;
     }
     .zxm_image_pre {
       opacity: 1;
-      // filter: blur(10px);
+      filter: blur(1px);
       transition: filter 1s ease-in-out;
     }
     .zxm_image_pre.loaded {
-      // filter: blur(0);
+      filter: blur(0);
     }
     .zxm_image_next {
       opacity: 0;
