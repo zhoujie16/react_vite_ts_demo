@@ -48,6 +48,24 @@ export default function Home() {
       preSrc: getImgUrl("9.svg"),
     },
   ];
+  arr = [
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+    ...arr,
+  ];
   return (
     <div className="demo3_wrap">
       {arr.map((x, i) => (
@@ -55,7 +73,7 @@ export default function Home() {
           key={i}
           src={x.src}
           preSrc={x.preSrc}
-          style={{ width: "10rem", height: "10rem" }}
+          style={{ width: "300px", height: "300px" }}
         />
       ))}
     </div>

@@ -14,11 +14,11 @@
     }
     .zxm_image_pre {
       opacity: 1;
-      filter: blur(1px);
+      // filter: blur(1px);
       transition: filter 1s ease-in-out;
     }
     .zxm_image_pre.loaded {
-      filter: blur(0);
+      // filter: blur(0);
     }
     .zxm_image_next {
       opacity: 0;
