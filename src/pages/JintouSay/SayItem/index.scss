@@ -1,0 +1,59 @@
+.jin_tou_say_item_wrap {
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  .jin_tou_say_item {
+    .jts_author {
+      display: flex;
+      margin-bottom: 12px;
+      .jts_author_l {
+        border-radius: 40px;
+        overflow: hidden;
+        flex: 0 0 40px;
+        height: 40px;
+        background-color: #ddd;
+        margin-right: 12px;
+        .jts_author_l_img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .jts_author_r {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3px;
+        font-size: 14px;
+        .jts_author_name {
+          color: #2f74e9;
+        }
+        .jts_author_time {
+          color: #999999;
+          font-size: 13px;
+        }
+      }
+    }
+    .jts_say_content {
+      font-size: 15px;
+      color: rgb(79, 79, 79);
+      line-height: 160%;
+      margin-bottom: 12px;
+      .topic,
+      .goods {
+        color: #2f74e9;
+      }
+    }
+    .jts_pictures_list {
+      display: flex;
+      flex-wrap: wrap;
+      .jts_pictures_img {
+        width: 100px;
+        height: 100px;
+        margin: 0 12px 12px 0;
+      }
+    }
+  }
+}

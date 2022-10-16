@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import "./assets/styles/index.scss";
 import Config from "./config";
 import Home from "@/pages/home";
@@ -12,6 +12,7 @@ import "./libs/rem";
 import { Provider } from "react-redux";
 import configStore from "./store/configureStore";
 import Demo3 from "./pages/demo3";
+import JintouSay from "./pages/JintouSay";
 
 // 初始化函数
 (() => {
@@ -29,14 +30,15 @@ const store = configStore();
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Demo1" element={<Demo1 />} />
           <Route path="/Demo2" element={<Demo2 />} />
           <Route path="/Demo3" element={<Demo3 />} />
+          <Route path="/JintouSay" element={<JintouSay />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </>
 );
