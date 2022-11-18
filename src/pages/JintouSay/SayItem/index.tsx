@@ -1,9 +1,7 @@
-import { getJinTouSay } from "@/api/demo";
-import { useEffect, useState } from "react";
 import { JTSayListItem } from "../types";
 import "./index.scss";
-import { Image, ImagePreview, Cell } from "react-vant";
-import moment from "moment";
+import { Image, ImagePreview } from "react-vant";
+import dayjs from "dayjs";
 
 function filterImgUrl(url: string) {
   let _url;
@@ -20,7 +18,7 @@ function Index({ sayItemProps }: { sayItemProps: JTSayListItem }) {
   let picture_list: any = [];
   let sendTime = "";
   try {
-    sendTime = moment(say.sendTime).format("MM-DD HH:mm:ss");
+    sendTime = dayjs(say.sendTime).format("MM-DD HH:mm:ss");
     picture_list = say.pictures?.split(",");
     picture_list = picture_list.filter((x: any) => x);
     picture_list = picture_list.map((x: any) => filterImgUrl(x));

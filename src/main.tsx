@@ -6,8 +6,7 @@ import Config from "./config";
 import Home from "@/pages/home";
 import Demo1 from "@/pages/demo1";
 import Demo2 from "@/pages/demo2";
-import { getParameterByName } from "./libs/utils";
-import eruda from "eruda";
+import { getParameterByName, getScript } from "./libs/utils";
 import "./libs/rem";
 import { Provider } from "react-redux";
 import configStore from "./store/configureStore";
@@ -21,7 +20,9 @@ import JintouSay from "./pages/JintouSay";
   }, 0);
   // querystring中加入debug=true开启debug工具
   if (getParameterByName("debug") === "true") {
-    eruda.init();
+    getScript("//www.jk.cn/hm-plan-c/eruda.js").then(() => {
+      (window as any).eruda.init();
+    });
   }
 })();
 
