@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 import configStore from "./store/configureStore";
 import Demo3 from "./pages/demo3";
 import JintouSay from "./pages/JintouSay";
+import Demo4 from "./pages/demo4";
 
 // 初始化函数
 (() => {
@@ -38,6 +39,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="/Demo2" element={<Demo2 />} />
           <Route path="/Demo3" element={<Demo3 />} />
           <Route path="/JintouSay" element={<JintouSay />} />
+          <Route path="/Demo4" element={<Demo4 />} />
         </Routes>
       </HashRouter>
     </Provider>
